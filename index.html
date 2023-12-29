@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+.first{
+    text-align: center;
+  margin-top: 300px
+}
+ button{
+    border-radius: 1px solid yellow;
+    background-color: yellow;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="first">
+ <h1 id="h1">0</h1>
+
+ <div class="buttontwo">
+    <button id="increment" onclick="update()" > increment</button>
+    <button id="decrement" > decrement</button>
+ </div>
+
+</div>
+    <script>
+let h1=document.getElementById("h1");
+let increment=document.getElementById("increment");
+let decrement=document.getElementById("decrement");
+
+let countervalue=0;
+
+function update (){
+    countervalue+=1;
+    h1.innerText=countervalue
+};
+
+decrement.addEventListener("click", function(){
+    countervalue-=10;
+    h1.innerText=countervalue
+})
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>
